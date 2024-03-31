@@ -1,4 +1,5 @@
 
+
 let dialog
 let closeButton
 let exitButton
@@ -24,18 +25,19 @@ function configureListeners() {
 function onCreateToDoItem(e) {
     e.preventDefault()
     
-    //updating user input
+    //imputting user input
     const todo = e.currentTarget.todo.value.trim()
     const category = e.currentTarget.category.value.trim()
     const status = e.currentTarget.status.value.trim()
 
-    createToDo({
+    //createToDo
+    const temp = ({
         todo,
         category,
         status,
         uid,
     })
-
+ console.log(temp)
     form.reset()
 }
 
