@@ -42,6 +42,16 @@ export function updateToDo(updatedToDo) {
     notify(store)
 }
 
-export function createToDo() {
+export function createToDo(createdToDo) {
+    let payload = createdToDo
     const dbRef = ref(db, 'todos')
+
+    //Pushing new to-do item to the RTDB
+    const newRef = push(dbRef);
+    payload.uid = newRef.key; // Assigning the generated key as the uid for the to-do item
+    set(newRef, payload); // Setting the data at the generated reference
+
+    //updating the store and letting the subscribers know it has been updated
+    const store = updateStore(payload)
+    notify(store)
 }

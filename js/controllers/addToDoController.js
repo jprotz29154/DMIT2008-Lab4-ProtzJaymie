@@ -1,4 +1,5 @@
 
+import { createToDo } from "../models/toDoListModel"
 
 let dialog
 let closeButton
@@ -30,14 +31,13 @@ function onCreateToDoItem(e) {
     const category = e.currentTarget.category.value.trim()
     const status = e.currentTarget.status.value.trim()
 
-    //createToDo
-    const temp = ({
+    createToDo ({
         todo,
         category,
         status,
         uid,
     })
- console.log(temp)
+
     form.reset()
 }
 
