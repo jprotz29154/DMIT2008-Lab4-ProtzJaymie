@@ -41,3 +41,7 @@ export function updateToDo(updatedToDo) {
     const store = updateStore(payload)
     notify(store)
 }
+
+export function createToDo() {
+    const dbRef = ref(db, 'todos')
+}

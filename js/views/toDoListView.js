@@ -2,6 +2,7 @@ import { toDoItemTemplate } from "../templates/toDoItemTemplate";
 import { subscribe } from "../models/toDoListModel";
 import { deleteToDoController } from "../controllers/deleteToDoController";
 import { updateToDoController } from "../controllers/updateToDoController";
+import { addToDoController } from "../controllers/addToDoController";
 
 let view;
 
